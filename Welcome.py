@@ -18,7 +18,7 @@ el_list = df.columns.tolist()[27:80]
 x = st.selectbox('x-axis', df.columns.tolist()[27:80])
 y = st.selectbox('y-axis', df.columns.tolist()[27:80], index =9)
 p = figure(
-    title='Scatter Plot',
+    title='Plot',
     x_axis_label= x + '(wt%)',
     y_axis_label= y + '(wt%)')
 mean1 = np.mean(df[x]/10000)
