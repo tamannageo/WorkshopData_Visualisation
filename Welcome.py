@@ -17,8 +17,8 @@ el_list = df.columns.tolist()[27:80]
 colours = ['blue', 'green', 'purple', 'pink', 'yellow', 'grey', 'black']
 st.multiselect('select location' , filename, filename[0])
 
-x = st.selectbox('x-axis', final_data.columns.tolist()[27:80])
-y = st.selectbox('y-axis', final_data.columns.tolist()[27:80], index =9)
+x = st.selectbox('x-axis', df1.columns.tolist()[27:80])
+y = st.selectbox('y-axis', df1.columns.tolist()[27:80], index =9)
 p = figure(
     title='Plot',
     x_axis_label= x + '(wt%)',
