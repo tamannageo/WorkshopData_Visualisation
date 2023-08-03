@@ -7,7 +7,7 @@ filename = []
 for i in os.listdir():
   if i.endswith('.csv'):
     df1 = pd.read_csv(i)
-    final_data=filename.append(i)
+    filename.append(i)
 
 st.write(filename) 
 df =  pd.read_csv('Bastar Craton.csv')
@@ -27,7 +27,7 @@ p = figure(
 #mean2 = np.mean(final_data[y]/10000)
                 
 for i in filename:
-  p.circle(final_data[i][x]/10000, final_data[i][y]/10000, legend_label=filename, color= colours,  line_width=2)
+  p.circle(filename[i][x]/10000, filename[i][y]/10000, legend_label=filename, color= colours,  line_width=2)
 #p.line(mean1, mean2, line_width=2)
 st.bokeh_chart(p, use_container_width=True)
 st.write(mean1, mean2)
