@@ -22,7 +22,7 @@ p = figure(
     x_axis_label= x + '(wt%)',
     y_axis_label= y + '(wt%)')
 
-p.circle(df[x]/10000, df[y]/10000, legend_label='Trend', line_width=2)
+#p.circle(df[x]/10000, df[y]/10000, legend_label='Trend', line_width=2)
 p.line(np.mean(df[x]/10000), np.mean(df[y]/10000),  line_width=2)
 st.bokeh_chart(p, use_container_width=True)
 st.write(np.mean(df[x]/10000))
