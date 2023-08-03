@@ -7,9 +7,9 @@ filename = []
 for i in os.listdir():
   if i.endswith('.csv'):
     df1 = pd.read_csv(i)
-    filename.append(i)
+    list= filename.append(df1)
 
-st.write(df1) 
+st.write(list) 
 df =  pd.read_csv('Bastar Craton.csv')
 st.dataframe(df)
 el_list = df.columns.tolist()[27:80]
