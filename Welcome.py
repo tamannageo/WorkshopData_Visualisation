@@ -6,6 +6,8 @@ import numpy as np
 filename = []
 for i in os.listdir():
   if i.endswith('.csv'):
+    df_list = []
+		for file in filename:
     df1 = pd.read_csv(i)
     list= filename.append(df1)
 
