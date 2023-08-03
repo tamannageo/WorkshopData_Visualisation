@@ -26,7 +26,7 @@ p = figure(
 #mean1 = np.mean(final_data[x]/10000)
 #mean2 = np.mean(final_data[y]/10000)
                 
-for i in file_data:
+for i in filename:
   p.circle(final_data[i][x]/10000, final_data[i][y]/10000, legend_label=filename, color= colours,  line_width=2)
 #p.line(mean1, mean2, line_width=2)
 st.bokeh_chart(p, use_container_width=True)
