@@ -6,9 +6,10 @@ import numpy as np
 filename = []
 for i in os.listdir():
   if i.endswith('.csv'):
+    df1 = pd.read_csv(i)
     filename.append(i)
 
- 
+st.write(filename) 
 df =  pd.read_csv('Bastar Craton.csv')
 st.dataframe(df)
 el_list = df.columns.tolist()[27:80]
