@@ -2,6 +2,7 @@ import streamlit as st
 import pandas as pd
 import os 
 from bokeh.plotting import figure
+import numpy as np
 filename = []
 for i in os.listdir():
   if i.endswith('.csv'):
@@ -22,5 +23,5 @@ p = figure(
     y_axis_label= y + '(wt%)')
 
 p.circle(df[x]/10000, df[y]/10000, legend_label='Trend', line_width=2)
-p.line(df[x]/10000.mean(), df[y]/10000.mean())
+p.line(np.mean(df[x]/10000), np.mean(df[y]/10000))
 st.bokeh_chart(p, use_container_width=True)
