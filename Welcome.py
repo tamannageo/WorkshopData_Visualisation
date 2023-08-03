@@ -23,10 +23,11 @@ p = figure(
     title='Plot',
     x_axis_label= x + '(wt%)',
     y_axis_label= y + '(wt%)')
-mean1 = np.mean(final_data[x]/10000)
-mean2 = np.mean(final_data[y]/10000)
+#mean1 = np.mean(final_data[x]/10000)
+#mean2 = np.mean(final_data[y]/10000)
                 
-p.circle(final_data[x]/10000, final_data[y]/10000, legend_label=filename, color= colours,  line_width=2)
+for i in file_data:
+  p.circle(final_data[i][x]/10000, final_data[i][y]/10000, legend_label=filename, color= colours,  line_width=2)
 #p.line(mean1, mean2, line_width=2)
 st.bokeh_chart(p, use_container_width=True)
 st.write(mean1, mean2)
