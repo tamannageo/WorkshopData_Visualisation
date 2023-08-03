@@ -6,10 +6,7 @@ filename = []
 for i in os.listdir():
   if i.endswith('.csv'):
     filename.append(i)
-
-
-
- st.write(filename)
+st.write(filename)
  
 
  
